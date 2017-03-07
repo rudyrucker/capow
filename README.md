@@ -9,4 +9,3 @@ Suggestions and help are in the online help file, rudyrucker.com/capow/capowhelp
 See also the Capow home page rudyrucker.com/capow
 
 
-
