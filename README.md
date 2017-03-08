@@ -9,6 +9,6 @@ Capow is known to work on all Windows builds through version 10.  Download and u
 <img alt="" src="http://www.rudyrucker.com/blog/images7/capow2017_1200.jpg" />
 
 Suggestions and help are in the online <a href="http://www.rudyrucker.com/capow/capowhelp.htm">Capow help file</a>.
-And see the Capow <a href="rudyrucker.com/capow">home page</a> for further references.
+And see the Capow <a href="http://www.rudyrucker.com/capow">home page</a> for further references.
 
 
