@@ -1,0 +1,1020 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+//#include<COMMCTRL.H>
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUT DIALOGEX 12, 31, 361, 227
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About CAPOW!"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "OK",IDOK,301,192,52,30
+    LTEXT           "Student Team Members: 1994-1997",IDC_STATIC,86,94,272,8
+    LTEXT           "Spring 94: Alan Borecky, Andrew Chu, Howard Lin, Charles Miller.",IDC_STATIC,86,102,272,9
+    LTEXT           "Fall 94:     Juyoung Lee , Tuyen Ly, Bob Westergaard.",IDC_STATIC,86,111,272,9
+    LTEXT           "Spring 95: David Kent, Juyoung Lee, Tuyen Ly, Ping-Chak Wong.",IDC_STATIC,86,120,272,9
+    LTEXT           "Fall 95:      Jerry Chang, Ning Tian.",IDC_STATIC,86,129,272,9
+    LTEXT           "Spring 96: Darrel Cherry, John Briere, Bang Nguyen, Thai Truong,  \n                 Juiliekara Techasaratoole, Rajaneekara Techasaratoole.",IDC_STATIC,86,138,270,16
+    LTEXT           "Fall 96:      Chi Pan Lao, Otto Leung, Darin Levy,  James Kroutch, Siu Ming Tong.",IDC_STATIC,84,154,269,9
+    LTEXT           "CAPOW! Continuous Valued Cellular Automata",IDC_STATIC,75,3,174,8
+    LTEXT           "Release 9.  March 8, 2017. Copyright 2017, Rudy Rucker.",IDC_STATIC,75,11,198,8
+    LTEXT           "Based on research funded by the Electric Power Research Institute (EPRI),",IDC_STATIC,75,23,320,8
+    LTEXT           "Palo Alto, California, with Martin Wildberger as project liason. The CAPOW",IDC_STATIC,75,31,320,8
+    LTEXT           "software and documentation are partly by teams at the Center for Applied",IDC_STATIC,75,39,320,8
+    LTEXT           "Mathematics.Computation and Statistics (CAMCOS) in the ",IDC_STATIC,75,47,320,8
+    LTEXT           "Mathematics Department at San Jose State University.",IDC_STATIC,75,55,320,8
+    LTEXT           "CAPOW Designer: Rudy Rucker, rudy@rudyrucker.com",IDC_STATIC,75,85,272,8
+    LTEXT           "",IDD_PROGICON,3,9,70,100,NOT WS_GROUP
+    LTEXT           "Capow home page: www.rudyrucker.com/capow \nSee also Rucker's book,\n ""The Lifebox, the Seashell and the Soul"" \n www.rudyrucker.com/lifebox",IDC_STATIC,75,182,197,32
+    LTEXT           "Spring 97:Michael Ling , Andrew Forster, Loc Ho, Lorrie Tanabe \nFall 97: Andrew Forster, Michael Ling, Ted Colbert,  Rong Liu.",IDC_STATIC,84,162,271,18
+    LTEXT           "The CAPOW executables and support files are shareware and may be\nfreely copied and distrubuted for non-commerical purposes.",IDC_STATIC,75,64,220,18
+END
+
+CYCLE DIALOG 41, 24, 126, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Breeding"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Entropy And &Fitness",IDC_STATIC,5,67,118,95
+    COMBOBOX        IDC_EVOLVE,9,48,82,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "&Evolve Method",IDC_STATIC,5,35,118,31
+    CHECKBOX        "&Breeding Cycle",IDC_BREED_CYCLE,9,6,66,8
+    GROUPBOX        "",IDC_STATIC,5,-1,118,34
+    CHECKBOX        "&Mutate at Breeding",MUTATE_BREED,13,171,78,10
+    GROUPBOX        "",IDC_STATIC,5,161,118,49
+    CHECKBOX        "&Zap on Stripe Failure",STRIPEKILL,13,184,91,10
+    CHECKBOX        "&Reseed On Stripe Failure",STRIPESEED,13,196,93,10
+    GROUPBOX        "",IDC_STATIC,5,209,118,24,NOT WS_VISIBLE
+    CONTROL         "Spin1",IDC_SPIN_BREED_BREED,"msctls_updown32",UDS_ALIGNLEFT | UDS_ARROWKEYS,108,16,10,14
+    CONTROL         "Spin2",IDC_SPIN_BREED_FAIL,"msctls_updown32",UDS_ARROWKEYS,108,82,10,14
+    CONTROL         "Spin3",IDC_SPIN_BREED_GOAL,"msctls_updown32",UDS_ARROWKEYS,108,100,10,14
+    LTEXT           "Steps:",IDC_STATIC,9,19,42,8
+    LTEXT           "Fail Strip:",IDC_STATIC,9,84,41,8
+    LTEXT           "Entropy Goal:",IDC_STATIC,9,102,48,8
+    LTEXT           "Entropy Score:",IDC_STATIC,10,121,49,8
+    CONTROL         "Spin4",IDC_SPIN_BREED_SCORE,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,108,118,10,14
+    LTEXT           "Current Entropy:",IDC_STATIC,9,148,52,8
+    CONTROL         "Spin5",IDC_SPIN_BREED_MUTATE,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | NOT WS_VISIBLE,108,216,10,14
+    LTEXT           "% to Mutate:",IDC_STATIC,9,219,52,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_BREEDING_STEPS,67,16,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FAILSTRIPE,67,82,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_TARGET_ENTROPY,67,100,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_ENTROPY_SCORE,67,118,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_CURRENT_ENTROPY,67,144,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_MUTATION,67,216,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_VISIBLE
+END
+
+EXPERIMENT DIALOG 22, 65474, 289, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Information Grid"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VERTMAX,11,24,55,12
+    COMBOBOX        IDC_VERTPARAM,11,64,55,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VERTMIN,11,98,55,12
+    CONTROL         "Mult. Scaling",IDC_MULT_SCALE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,11,132,48,8
+    CONTROL         "Add. Scaling",IDC_ADD_SCALE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,11,146,48,8
+    EDITTEXT        IDC_HORZMIN,84,182,53,12
+    COMBOBOX        IDC_HORZPARAM,152,182,52,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HORZMAX,216,182,54,12
+    EDITTEXT        IDC_INFO11MIN,88,24,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO11MAX,88,44,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO12MIN,152,24,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO12MAX,152,44,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO13MIN,212,24,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO13MAX,212,44,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO21MIN,88,73,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO21MAX,88,92,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO22MIN,152,73,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO22MAX,152,92,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO23MIN,212,73,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO23MAX,212,92,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO31MIN,88,120,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO31MAX,88,140,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO32MIN,152,120,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO32MAX,153,140,51,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO33MIN,212,120,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO33MAX,212,140,58,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Apply",IDC_OK,14,183,45,16
+    PUSHBUTTON      "&Close",IDC_EXIT,14,204,45,16
+    GROUPBOX        "",IDC_DISPLAY,80,12,198,148,BS_CENTER
+    GROUPBOX        "",-1,6,120,66,59
+    CTEXT           "CA Grid (HORZ, VER)",-1,148,4,122,8
+    GROUPBOX        "MAX",-1,6,12,66,32
+    GROUPBOX        "VER PARAM",-1,6,49,66,31
+    GROUPBOX        "MIN",-1,6,84,66,34
+    GROUPBOX        "MIN",-1,80,169,64,32
+    GROUPBOX        "HORZ PARAM",-1,148,169,60,32
+    GROUPBOX        "MAX",-1,212,169,66,32
+    GROUPBOX        "",IDC_DISPLAY2,148,12,60,148,BS_CENTER
+    GROUPBOX        "",IDC_DISPLAY3,80,59,198,53,BS_CENTER
+    DEFPUSHBUTTON   "&Ramp All",IDC_RAMP,14,158,45,16
+END
+
+COLOR DIALOG 71, 49, 121, 230
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color"
+FONT 8, "Helv"
+BEGIN
+    CONTROL         "",IDD_PAINT,"Static",SS_WHITERECT | WS_GROUP,3,13,44,200
+    LTEXT           "High Intensity",-1,4,4,47,8
+    LTEXT           "Low Intensity",-1,4,213,47,11
+    PUSHBUTTON      "&Random",COL_RAND,72,31,33,14
+    GROUPBOX        "Color:",-1,49,14,69,63
+    GROUPBOX        "Band Count:",-1,49,78,69,40
+    GROUPBOX        "Palette Size:",-1,49,119,69,53
+    CONTROL         "&16",IDM_16,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,53,130,21,12
+    CONTROL         "&256",IDM_256,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,53,144,43,12
+    CONTROL         "&Thousands",IDM_1000,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,53,159,47,12
+    CHECKBOX        "&Mono",IDC_MONOCHROME,69,59,36,13
+    CONTROL         "Spin1",IDC_SPINBANDCOUNT,"msctls_updown32",UDS_ARROWKEYS,97,91,14,20
+    EDITTEXT        IDC_NUMBAND,54,94,40,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Change Which?",-1,49,176,70,37
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,53,189,62,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,53,200,57,8
+END
+
+FOURIER DIALOGEX 10, 65534, 197, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Fourier"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Analyze The Time Series",IDC_APPROXIMATE,80,161,100,14,WS_DISABLED
+    GROUPBOX        "View Which?",-1,1,44,69,73
+    RADIOBUTTON     "1/2",IDC_TIMESCALEHALF,6,134,27,10,WS_DISABLED | WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "2",IDC_TIMESCALEDOUBLE,6,154,16,10,WS_DISABLED | WS_GROUP | WS_TABSTOP
+    CONTROL         "1",IDC_TIMESCALETRUE,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP | WS_TABSTOP,6,144,20,10
+    CHECKBOX        "Gra&ph",IDC_VIEWGRAPH,6,58,49,12,WS_DISABLED
+    CHECKBOX        "Appro&ximation",IDC_VIEWAPPROX,6,68,58,12,WS_DISABLED
+    CHECKBOX        "Cosine &Terms",IDC_VIEWCOSINE,6,78,57,12,WS_DISABLED
+    CHECKBOX        "Sine T&erms",IDC_VIEWSINE,6,88,55,12,WS_DISABLED
+    CHECKBOX        "Spect&rum",IDC_VIEWSPECTRUM,6,98,53,12,WS_DISABLED
+    GROUPBOX        "# of Terms",-1,74,4,118,36
+    GROUPBOX        "Position",-1,74,94,118,47
+    PUSHBUTTON      "&Change",IDC_CHANGESAMPLE,108,127,42,11,WS_DISABLED
+    GROUPBOX        "Appr. Type",-1,74,45,118,46
+    RADIOBUTTON     "S&ine",IDC_SINEONLY,79,58,32,10,WS_DISABLED | WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "&Both",IDC_BOTHSINECOSINE,79,78,36,10,WS_DISABLED | WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "C&osine",IDC_COSINEONLY,79,68,38,10,WS_DISABLED | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "View Type",-1,1,4,69,36
+    CONTROL         "&Graph",IDC_FOURIERGRAPH,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP | WS_TABSTOP,6,17,33,10
+    CONTROL         "&Scroll",IDC_FOURIERSCROLL,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP | WS_TABSTOP,6,27,33,10
+    GROUPBOX        "Scale",-1,1,121,69,61
+    CONTROL         "Spin1",IDC_SPIN_FOURIER_TERMS,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,121,18,11,15
+    CONTROL         "Slider1",IDC_FOURIER_SLIDER,"msctls_trackbar32",TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,79,108,107,15,WS_EX_STATICEDGE
+    GROUPBOX        "Fourier Analysis Of The Time Series",-1,74,143,118,39
+    EDITTEXT        IDC_NUMTERM,79,19,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    GROUPBOX        "Change Which?",-1,1,185,69,37
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_TABSTOP,6,197,57,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_TABSTOP,6,208,56,8
+END
+
+CELL DIALOGEX 80, 36, 178, 100
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Clone"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Actions",IDC_STATIC,5,4,132,59
+    PUSHBUTTON      "&Mutate (Any Rule)",BUTT_MUTATE,21,16,108,12
+    PUSHBUTTON      "&Copy Mutate (Any Rule)",BUTT_COPYMUTATE,20,31,109,13
+    PUSHBUTTON      "&Breed (Digital Rules Only)",BUTT_BREED,20,47,109,12
+    CONTROL         "Spin5",IDC_SPIN_BREED_MUTATE,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,66,78,10,14
+    EDITTEXT        IDC_MUTATION,13,78,49,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    GROUPBOX        "%to Mutate (Value for Digital Rules):",IDC_STATIC,5,66,128,30
+END
+
+ELECTRIC DIALOGEX 100, 91, 109, 161
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Electric Power CAs"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",-1,2,0,106,25
+    LTEXT           "1/Capacitance",SPRING_NEW,6,10,48,10
+    GROUPBOX        "",-1,2,23,106,25
+    LTEXT           "Friction",FRICTION_NEW,6,32,40,10
+    GROUPBOX        "",-1,2,44,106,25
+    LTEXT           "Driver Amp",DRIVER_AMP_NEW,6,54,40,10
+    GROUPBOX        "",-1,2,66,106,25
+    LTEXT           "Driver Freq",DRIVER_FREQ_NEW,6,76,40,10
+    GROUPBOX        "",-1,2,88,106,25
+    LTEXT           "Mass",MASS_NEW,6,99,40,10
+    EDITTEXT        SPRING_TYPE,56,9,34,12
+    EDITTEXT        FRICTION_TYPE,56,31,34,12
+    EDITTEXT        DRIVER_AMP_TYPE,56,53,34,12
+    EDITTEXT        DRIVER_FREQ_TYPE,56,74,34,12
+    EDITTEXT        MASS_TYPE,56,97,34,12
+    CONTROL         "Spin1",IDC_SPIN_ELECTRIC_CAP,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,91,8,10,14
+    CONTROL         "Spin2",IDC_SPIN_ELECTRIC_FRICTION,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,91,30,10,14
+    CONTROL         "Spin3",IDC_SPIN_ELECTRIC_AMP,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,91,52,10,14
+    CONTROL         "Spin4",IDC_SPIN_ELECTRIC_FREQ,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,91,73,10,14
+    CONTROL         "Spin5",IDC_SPIN_ELECTRIC_MASS,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,92,96,10,14
+    GROUPBOX        "Change Which?",-1,2,122,106,37
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,134,92,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,145,92,8
+END
+
+DIGITAL DIALOGEX 8, 21, 108, 179
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Miscellaneous Controls"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Digital CAs ( And Wave Reverse)",-1,1,5,106,92
+    GROUPBOX        "Rad&ius and States",-1,4,16,100,30
+    COMBOBOX        RADIUSSTATES_NEW,6,28,90,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Actions",-1,4,46,100,27
+    PUSHBUTTON      "&Symmetrize",BUTT_SYM,8,56,46,12
+    PUSHBUTTON      "&Reverse",BUTT_REVERSE,56,56,44,12
+    LTEXT           "Lambda",TARGET_LAMBDA_NEW,6,80,34,9
+    GROUPBOX        "&Diverse CAs",-1,2,99,106,30
+    LTEXT           "Mutatino Strength",VARIANCE_NEW,6,114,30,9
+    EDITTEXT        VARIANCE_TYPE,48,112,40,12
+    EDITTEXT        LAMBDA_TYPE,48,78,40,12
+    CONTROL         "Spin1",IDC_SPINLAMBDA,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | WS_DISABLED,90,76,10,14
+    CONTROL         "Spin2",IDC_SPINDIVERSE,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,90,110,10,14
+    GROUPBOX        "Change Which?",-1,2,135,106,37
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,147,92,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,158,92,8
+END
+
+VIEW DIALOGEX 6, 15, 222, 160
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "View"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    RADIOBUTTON     "C&ycle Down",RADIO_DOWN_VIEW,6,16,54,10,WS_TABSTOP
+    RADIOBUTTON     "&Scroll Up",RADIO_SCROLL_VIEW,6,26,54,10,WS_TABSTOP
+    RADIOBUTTON     "&Wire View",RADIO_WIRE_VIEW,6,36,48,10,WS_TABSTOP
+    RADIOBUTTON     "&Graph View",RADIO_GRAPH_VIEW,6,46,54,10,WS_TABSTOP
+    CONTROL         "Spl&it View",RADIO_SPLIT_VIEW,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,6,56,54,10
+    RADIOBUTTON     "&Point View",RADIO_POINT_VIEW,6,66,54,10,WS_TABSTOP
+    GROUPBOX        "Cells to Show",-1,86,4,76,45
+    RADIOBUTTON     "A&ll",RADIO_BOTH_SHOW,91,15,54,10,WS_TABSTOP
+    RADIOBUTTON     "&Odd",RADIO_ODD_SHOW,91,25,54,10,WS_TABSTOP
+    RADIOBUTTON     "E&ven",RADIO_EVEN_SHOW,91,35,54,10,WS_TABSTOP
+    GROUPBOX        "Quantity Displayed (Depends on CA Type)",-1,88,51,132,47
+    RADIOBUTTON     "&Intensity / Charge / Activator",RADIO_SHOW_CHARGE,92,65,98,10,WS_TABSTOP
+    RADIOBUTTON     "Velocity / Current / Inhibitor / None",RADIO_SHOW_CURRENT,92,75,115,15,WS_TABSTOP
+    GROUPBOX        "Number of CAs",-1,87,102,76,45
+    GROUPBOX        "Normal Display Styles",-1,2,4,80,81
+    CONTROL         "&One",RADIO_VIEW_ONE,"Button",BS_AUTORADIOBUTTON,91,112,29,10
+    CONTROL         "Fou&r",RADIO_VIEW_FOUR,"Button",BS_AUTORADIOBUTTON,91,123,30,10
+    CONTROL         "&Nine",RADIO_VIEW_NINE,"Button",BS_AUTORADIOBUTTON,91,133,31,10
+    GROUPBOX        "Change Which?",-1,1,100,81,45
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,2,119,68,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,2,130,61,8
+END
+
+WORLD DIALOG 15, 23, 147, 183
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "World"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "CA T&ype",IDC_STATIC,1,3,140,27
+    PUSHBUTTON      "Random",IDC_RANDOMSEED,39,46,30,14
+    PUSHBUTTON      "&One",IDC_ONESEED,6,46,30,14
+    PUSHBUTTON      "Wave",IDC_SINESEED,6,62,30,14
+    PUSHBUTTON      "&Smooth",IDC_SMOOTH,69,89,63,14
+    PUSHBUTTON      "Fourier",IDC_FOURIERSEED,72,46,33,14
+    COMBOBOX        IDC_CATYPE_WORLD,4,13,74,142,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Randomize",IDC_STATIC,0,145,95,32
+    PUSHBUTTON      "&Color",IDC_RAND_COLOR,5,157,34,14
+    PUSHBUTTON      "CA &Parameters",IDC_RAND_LOOKUP,41,157,51,14
+    GROUPBOX        "&Options",IDC_STATIC,56,106,88,35
+    CHECKBOX        "Generator",IDC_GENERATOR,60,115,51,12
+    CHECKBOX        "Auto&matic Smoothing",IDC_AUTOSMOOTH,60,128,80,11
+    PUSHBUTTON      "Load &User Rule",IDC_LOAD_USER_RULE,82,12,55,14
+    PUSHBUTTON      "Zero",IDC_ZEROSEED,39,62,30,14
+    GROUPBOX        "Change",IDC_STATIC,100,144,44,33
+    CONTROL         "All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,104,153,24,8
+    CONTROL         "Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,104,163,33,8
+    PUSHBUTTON      """CAPOW""",IDC_SEED_CAPOW,107,62,33,14
+    GROUPBOX        "Seed",IDC_STATIC,3,34,141,45
+    PUSHBUTTON      "Ding",IDC_RANDOMTOUCH,107,46,34,14
+    GROUPBOX        "Edges",IDC_STATIC,3,82,47,59
+    CONTROL         "Zero",IDC_ZERO,"Button",BS_AUTORADIOBUTTON,7,92,27,8
+    CONTROL         "Wrapped",IDC_WRAP,"Button",BS_AUTORADIOBUTTON,7,100,42,9
+    CONTROL         "Fixed",IDC_FIXED,"Button",BS_AUTORADIOBUTTON,7,109,36,9
+    CONTROL         "Free",IDC_FREE,"Button",BS_AUTORADIOBUTTON,7,118,35,10
+    CONTROL         "Absorb",IDC_ABSORB,"Button",BS_AUTORADIOBUTTON,7,128,38,10
+    PUSHBUTTON      "Half Max",IDC_SEED_HALFMAX,72,62,33,14
+END
+
+ANALOG DIALOGEX 48, 26, 110, 224
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Analog CAs"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",-1,2,0,106,25
+    LTEXT           "&Space Step",SPACE_STEP_NEW,6,10,38,10
+    GROUPBOX        "",-1,2,23,106,25
+    LTEXT           "&Velocity",VELOCITY_NEW,6,32,35,10
+    GROUPBOX        "",-1,2,44,106,25
+    LTEXT           "&Intensity",INTENSITY_NEW,6,54,46,10
+    GROUPBOX        "",-1,2,66,106,25
+    LTEXT           "&Max Velocity",MAX_VEL_NEW,6,76,45,9
+    GROUPBOX        "",-1,2,88,106,25
+    LTEXT           "&Heat Count",HEAT_COUNT_NEW,6,99,46,12
+    GROUPBOX        "",-1,2,110,106,25
+    LTEXT           "State &Grain",CHUNK_NEW,5,122,39,10
+    LTEXT           "&3D Height",MAX_VALPERCENT_NEW,5,143,40,10,NOT WS_VISIBLE | WS_DISABLED
+    GROUPBOX        "",-1,2,132,106,25,NOT WS_VISIBLE | WS_DISABLED
+    CHECKBOX        "Stable D&X",CHK_DX_LOCK,5,162,90,12
+    EDITTEXT        SPACE_STEP_TYPE,56,9,33,12,ES_AUTOHSCROLL
+    EDITTEXT        TIME_STEP_TYPE,56,31,33,12,ES_AUTOHSCROLL
+    EDITTEXT        MAX_INTENSITY_TYPE,56,53,33,12,ES_AUTOHSCROLL
+    EDITTEXT        MAX_VELOCITY_TYPE,56,74,33,12,ES_AUTOHSCROLL
+    EDITTEXT        HEAT_INC_TYPE,56,97,33,12,ES_AUTOHSCROLL
+    EDITTEXT        CHUNK_TYPE,56,119,33,12,ES_AUTOHSCROLL
+    EDITTEXT        _3D_HEIGHT,56,141,33,12,ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "Spin1",IDC_SPIN_ANALOG_3DHEIGHT,"msctls_updown32",UDS_ARROWKEYS | NOT WS_VISIBLE | WS_DISABLED,91,140,10,14
+    CONTROL         "Spin2",IDC_SPIN_ANALOG_STATEGRAIN,"msctls_updown32",UDS_ARROWKEYS,91,118,10,14
+    CONTROL         "Spin3",IDC_SPIN_ANALOG_HEATCOUNT,"msctls_updown32",UDS_ARROWKEYS,91,96,10,14
+    CONTROL         "Spin4",IDC_SPIN_ANALOG_MAXVELOCITY,"msctls_updown32",UDS_ARROWKEYS,91,73,10,14
+    CONTROL         "Spin5",IDC_SPIN_ANALOG_INTENSITY,"msctls_updown32",UDS_ARROWKEYS,91,52,10,14
+    CONTROL         "Spin6",IDC_SPIN_ANALOG_VELOCITY,"msctls_updown32",UDS_ARROWKEYS,91,30,10,14
+    CONTROL         "Spin7",IDC_SPIN_ANALOG_SPACESTEP,"msctls_updown32",UDS_ARROWKEYS,91,8,10,14
+    GROUPBOX        "Change Which?",-1,2,181,106,37
+    CONTROL         "Change &All",RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,193,92,8
+    CONTROL         "Change &Focus",RADIO_FOCUS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,5,204,92,8
+END
+
+GENERATORS DIALOG 0, 0, 156, 182
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Generators"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Remove All Generators",IDC_GENERATORS_CLEAR,74,156,78,20
+    EDITTEXT        IDC_GENERATORS_OMEGA,86,23,39,13
+    CTEXT           "Frequency",IDC_STATIC,85,13,42,10
+    CONTROL         "Spin1",IDC_GENERATORS_SPIN_OMEGA,"msctls_updown32",UDS_ARROWKEYS,128,23,9,12
+    GROUPBOX        "Cursor Type",IDC_STATIC,4,126,64,50
+    PUSHBUTTON      "Pick 'n zoom",IDC_GENERATORS_PICK_CUR,11,136,47,14
+    PUSHBUTTON      "Place Generator",IDC_GENERATORS_GEN_CUR,9,156,54,14
+    LISTBOX         IDC_GENERATORS_LIST1,6,31,50,75,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "X",IDC_STATIC,11,23,8,8
+    LTEXT           "Y",IDC_STATIC,31,23,10,8
+    CTEXT           "Amplitude",IDC_STATIC,88,43,35,10
+    EDITTEXT        IDC_GENERATORS_AMP,86,54,39,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_GENERATORS_SPIN_AMP,"msctls_updown32",UDS_ARROWKEYS,128,55,9,12
+    PUSHBUTTON      "Remove ",IDC_GENERATORS_REMOVE_INDEX_I,109,122,39,19,BS_MULTILINE
+    EDITTEXT        IDC_GENERATORS_INDEX,80,122,24,16,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Remove Generator?",IDC_STATIC,74,112,78,39
+    CTEXT           "Generator\nPosition",IDC_STATIC,6,4,46,17
+    LTEXT           "Position",IDC_STATIC,80,139,28,9
+    GROUPBOX        "Selected Generator",IDC_STATIC,80,3,70,71
+    GROUPBOX        "Phase",IDC_STATIC,77,79,69,24
+    PUSHBUTTON      "Synchronize",IDC_GENERATORS_PHASE,86,86,50,14
+END
+
+OPENGL DIALOGEX 0, 0, 240, 311
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "3D View Controls"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_OPENGL_GRAPHTYPES,30,3,54,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPENGL_SURFACE,30,17,54,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPENGL_MATERIAL,30,31,54,137,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPENGL_RESOLUTION,41,45,43,51,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Spin",IDC_OPENGL_SPIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,215,30,10
+    CONTROL         "Z&ero",IDC_OPENGL_ZERO_PLANE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,215,30,10
+    CONTROL         "Ma&x",IDC_OPENGL_MAX_PLANE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,215,29,10
+    CONTROL         "&Generators",IDC_OPENGL_SHOW_GENERATORS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,225,51,10,WS_EX_TRANSPARENT
+    CONTROL         "Fly Position",IDC_OPENGL_FLY_SHOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,225,49,10,WS_EX_TRANSPARENT
+    CONTROL         "3-D Glasses Mode",IDC_OPENGL_GLASSES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,236,70,10
+    CONTROL         "Anitaliased Lines",IDC_OPENGL_ANTIALIASED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,247,71,10
+    CONTROL         "Render While Paused",IDC_OPENGL_GLSLEEP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,244,82,10
+    PUSHBUTTON      "&Flip",IDC_OPENGL_FLIP_TYPE,88,9,30,12
+    PUSHBUTTON      "&Reset",IDC_OPENGL_RESET,89,24,30,12
+    PUSHBUTTON      "&Pause",IDC_OPENGL_PAUSE,89,42,30,12
+    PUSHBUTTON      "Orient",IDC_OPENGL_ORIENT,131,11,25,13
+    PUSHBUTTON      "Height",IDC_OPENGL_HEIGHT,131,24,25,13
+    PUSHBUTTON      "Zoom",IDC_OPENGL_ZOOM,131,37,25,13
+    PUSHBUTTON      "Pan",IDC_OPENGL_PAN,160,15,25,13
+    PUSHBUTTON      "Fly",IDC_OPENGL_FLY,159,32,25,13
+    PUSHBUTTON      "Capture to VRML file",IDC_OPENGL_TO_VRML,4,278,98,19
+    LTEXT           "Gr&aph",IDC_STATIC,4,5,20,8
+    CONTROL         "",IDC_OPENGL_FLAT,"Static",SS_BLACKRECT,13,62,210,115,WS_EX_TRANSPARENT
+    LTEXT           "Mater&ial",IDC_STATIC,4,32,26,10
+    GROUPBOX        "Show",IDC_STATIC,4,204,183,62
+    LTEXT           "Surface",IDC_STATIC,4,19,24,10
+    LTEXT           "Resolution",IDC_STATIC,4,47,33,8
+    GROUPBOX        "Mouse",IDC_STATIC,127,3,59,50,BS_CENTER
+END
+
+CONTROLS DIALOGEX 76, 155, 266, 177
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Data",IDC_CBWORLD,4,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBCOLOR,20,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBDIGITAL,52,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBANALOG,68,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBELECTRIC,84,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBCLOSE,172,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBBREED,132,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBVIEW,36,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBFOURIER,100,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBEXP,148,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "Data",IDC_CBCLONE,116,1,16,17,BS_BITMAP | NOT WS_TABSTOP
+END
+
+SAVE DIALOGEX 0, 0, 137, 133
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Save CA File"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Save",IDOK,6,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,109,50,14
+    GROUPBOX        "Which CA?",IDC_STATIC,3,6,64,40
+    CONTROL         "Focus CA",IDC_SAVE_FOCUS_CA,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,9,19,47,10
+    CONTROL         "All CA's",IDC_SAVE_ALL_CAS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,9,34,39,10
+    CONTROL         "[BROKEN] File Compression\n(Use 8 Char Name)",IDC_FILE_COMPRESSION,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_DISABLED | WS_TABSTOP,70,18,69,25
+    GROUPBOX        "Which Characteristics?",IDC_STATIC,3,53,117,48
+    CONTROL         "Parameters Only",IDC_SAVE_PARAMETERS_ONLY,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,9,66,67,10
+    CONTROL         "Parameters and Image",IDC_SAVE_PARAMETERS_AND_IMAGE,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,9,79,86,15
+END
+
+CONFIGURE DIALOGEX 0, 0, 255, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Randomize"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Seconds",IDC_STATIC,79,187,29,8
+    GROUPBOX        "Autorandomize Time Interval",IDC_STATIC,14,174,102,24,BS_CENTER
+    GROUPBOX        "Possible CA Dimensionality",IDC_STATIC,16,56,93,43,BS_CENTER
+    CONTROL         "2D Rules Only",IDC_ALLOW_2D_RULES,"Button",BS_AUTORADIOBUTTON,22,75,61,10
+    CONTROL         "1D Rules Only",IDC_ALLOW_1D_RULES,"Button",BS_AUTORADIOBUTTON,22,64,61,10
+    CONTROL         "Both 1D and 2D",IDC_ALLOW_BOTH_RULES,"Button",BS_AUTORADIOBUTTON,22,86,67,10
+    GROUPBOX        "Possible Numbers Of CAs",IDC_STATIC,139,55,98,32,BS_CENTER
+    CONTROL         "Randomize Colors",IDC_ALLOW_RANDOM_COLOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,186,88,10
+    PUSHBUTTON      "Autorandomize Once",IDC_RANDOMIZE,88,7,53,22,BS_MULTILINE
+    PUSHBUTTON      "Reset Settings",IDC_RESET,15,212,78,19
+    CONTROL         "Digital Only",IDC_DIGITAL,"Button",BS_AUTORADIOBUTTON,22,112,51,10
+    GROUPBOX        "Possible 1D Rule Types",IDC_STATIC,16,104,93,43
+    CONTROL         "Analog Only",IDC_ANALOG,"Button",BS_AUTORADIOBUTTON,22,122,65,10
+    CONTROL         "Both Digital and Analog",IDC_DIGITALANALOG,"Button",BS_AUTORADIOBUTTON,22,133,84,10
+    CONTROL         "Add A Bump To Seeding",IDC_DING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,196,88,10
+    GROUPBOX        "Possible Views of 1D CAs",IDC_STATIC,139,88,98,54
+    CONTROL         "Scroll View Only",IDC_SCROLL,"Button",BS_AUTORADIOBUTTON,142,108,67,10
+    CONTROL         "Split View Only (With Graph)",IDC_SPLIT,"Button",BS_AUTORADIOBUTTON,142,97,92,10
+    CONTROL         "Both Split and Scroll Views",IDC_SPLITSCROLL,"Button",BS_AUTORADIOBUTTON,142,119,88,10
+    GROUPBOX        "Views of Single 2D CA",IDC_STATIC,139,142,98,35
+    GROUPBOX        "Settings for Autorandomizing (and for the Screen Saver)",IDC_STATIC,6,35,242,201
+    CONTROL         "OFF",IDC_AUTORANDOMIZE_OFF,"Button",BS_AUTORADIOBUTTON,11,17,25,9
+    CONTROL         "ON",IDC_AUTORANDOMIZE_ON,"Button",BS_AUTORADIOBUTTON,45,17,25,9
+    PUSHBUTTON      "Randomize the CA Parameters Once",IDC_RAND_LOOKUP,147,7,64,22,BS_MULTILINE
+    GROUPBOX        "Timed Autorandomizing",IDC_STATIC,6,7,78,22
+    EDITTEXT        IDC_TIMER,25,182,40,14,ES_AUTOHSCROLL
+    CONTROL         "Nine",IDC_NINE_CA,"Button",BS_AUTORADIOBUTTON,192,64,31,10
+    CONTROL         "Four",IDC_FOUR_CA,"Button",BS_AUTORADIOBUTTON,142,74,31,10
+    CONTROL         "One",IDC_ONE_CA,"Button",BS_AUTORADIOBUTTON,142,63,31,10
+    CONTROL         "Varying",IDC_VARYCOUNT,"Button",BS_AUTORADIOBUTTON,192,73,35,11
+    PUSHBUTTON      "Save Settings",IDC_PROFILE_SAVE,129,211,78,19
+    CONTROL         "All Possible Views",IDC_ALLVIEW,"Button",BS_AUTORADIOBUTTON,142,130,83,10
+    GROUPBOX        "CA Rule",IDC_STATIC,14,46,102,122
+    CONTROL         "3D Surface",IDC_ALLOW_3D_VIEW,"Button",BS_AUTORADIOBUTTON,142,152,49,10
+    CONTROL         "2D Colors",IDC_FLAT_3D_VIEW,"Button",BS_AUTORADIOBUTTON,142,161,46,10
+    CONTROL         "Both ",IDC_BOTH_3D_VIEW,"Button",BS_AUTORADIOBUTTON,192,150,31,16
+    GROUPBOX        "CA View",IDC_STATIC,129,46,114,134
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+CAPOW                   ICON                    "capow.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+CUR_ZAP                 CURSOR                  "bolt.cur"
+
+CUR_COPY                CURSOR                  "copy.cur"
+
+CUR_TOUCH               CURSOR                  "touch.cur"
+
+CUR_GENERATOR           CURSOR                  "generator.cur"
+
+IDC_CURSOR1             CURSOR                  "cursor1.cur"
+
+IDC_CURSOR2             CURSOR                  "cursor2.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+TOOLBARBMP              BITMAP                  "toolbar.bmp"
+
+ABOUTBMP                BITMAP                  "about.bmp"
+
+IDB_BITMAP3             BITMAP                  "actionbar.bmp"
+
+SEEDBITMAP              BITMAP                  "seedbitm.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+CAPOW MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open\tCtrl + O",             IDM_OPEN
+        MENUITEM "&Save\tCtrl + S",             IDM_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause\tCtrl + P",            IDM_PAUSE
+        POPUP "Speed"
+        BEGIN
+            MENUITEM "Fastest",                     ID_FASTEST
+            MENUITEM "Fast",                        ID_FAST
+            MENUITEM "Medium",                      ID_MEDIUM
+            MENUITEM "Slow",                        ID_SLOW
+            MENUITEM "Very Slow",                   ID_VERYSLOW
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Randomize...",               IDM_CONFIGURE
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Capture\tCtrl + C",          IDM_CAPTURE
+        MENUITEM "&Clear\tCtrl + L",            IDM_CLEAR
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "&World...\tCtrl + W",         IDM_WORLD
+        MENUITEM "C&olor...",                   IDM_COLOR
+        MENUITEM "&View...\tCtrl + V",          IDM_VIEW
+        MENUITEM "&Miscellaneous...",           IDM_DIGITAL
+        MENUITEM "&Analog...",                  IDM_ANALOG
+        MENUITEM "&Electric...",                IDM_ELECTRIC
+        MENUITEM SEPARATOR
+        MENUITEM "&Fourier...",                 IDM_FOURIER
+        MENUITEM "Generators...",               IDM_GENERATORS
+        MENUITEM "&User Dialog...\tCtrl + U",   IDM_USERDIALOG
+        MENUITEM "&Info Grid...",               IDM_EXP
+        MENUITEM SEPARATOR
+        MENUITEM "C&lone...",                   IDM_CELL
+        MENUITEM "&Breeding...",                IDM_CYCLE
+        MENUITEM SEPARATOR
+        MENUITEM "3D View Controls...\tCtrl + G", IDM_OPENGL
+        MENUITEM SEPARATOR
+        MENUITEM "Change All\tCtrl + A",        IDM_CHANGEALLMENU, CHECKED
+        MENUITEM "Change Focus\tCtrl + F",      IDM_CHANGEFOCUSMENU
+    END
+    POPUP "&Bar"
+    BEGIN
+        MENUITEM "&Status Bar",                 IDM_SHOW_STATUS, CHECKED
+        MENUITEM "&DialogToolbar",              IDM_OLDTOOLBAR
+    END
+    POPUP "C&ursor"
+    BEGIN
+        MENUITEM "&Pick and Zoom\tShift + F1",  CUR_PICK, CHECKED
+        MENUITEM "T&ouch Mode\tShift + F3",     CUR_TOUCH
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Online Help",                IDM_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   IDM_ABOUT
+    END
+END
+
+CATYPEPOPMENU MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Standard",                   CA_STANDARD
+        MENUITEM "Reversi&ble",                 CA_REVERSIBLE
+        MENUITEM "&Driven Heat",                CA_HEATWAVE
+        MENUITEM "B&ig Nabe Heat",              CA_HEATWAVE2
+        MENUITEM "&Wave Equation",              ALT_CA_WAVE
+        MENUITEM "Bi&g Nabe Wave",              CA_WAVE2
+        MENUITEM "&Oscillators",                CA_OSCILLATOR
+        MENUITEM "Di&verse Osc",                CA_DIVERSE_OSCILLATOR
+        MENUITEM "Wav&e Osc",                   ALT_CA_OSCILLATOR_WAVE
+        MENUITEM "Dive&rse Wave Osc",           ALT_CA_DIVERSE_OSCILLATOR_WAVE
+        MENUITEM "&Quadratic Wave",             ALT_CA_ULAM_WAVE
+        MENUITEM "&Cubic Wave",                 CA_CUBIC_ULAM_WAVE
+        MENUITEM "Boi&ling Wave",               CA_AUTO_ULAM_WAVE
+        MENUITEM "&2D Wave",                    CA_WAVE_2D
+        MENUITEM "2D Hea&t",                    CA_HEAT_2D
+    END
+END
+
+SEEDPOPMENU MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&One Seed",                   IDC_ONESEED
+        MENUITEM "&Wave Seed",                  IDC_SINESEED
+        MENUITEM "&Random Seed",                IDC_RANDOMSEED
+        MENUITEM "&Zero Seed",                  IDC_ZEROSEED
+        MENUITEM "&Halfmax Seed",               IDC_SEED_HALFMAX
+        MENUITEM "&Ding",                       IDC_RANDOMTOUCH
+        MENUITEM "&Fourier Seed",               IDC_FOURIERSEED
+        MENUITEM "&Smooth",                     IDC_SMOOTH
+    END
+END
+
+VIEWPOPMENU MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Cycle Down",                 RADIO_DOWN_VIEW
+        MENUITEM "&Scroll Up",                  RADIO_SCROLL_VIEW
+        MENUITEM "&Wire View",                  RADIO_WIRE_VIEW
+        MENUITEM "&Graph View",                 RADIO_GRAPH_VIEW
+        MENUITEM "Sp&lit View",                 RADIO_SPLIT_VIEW
+        MENUITEM "&Point View",                 RADIO_POINT_VIEW
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "//#include<COMMCTRL.H>\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    "ABOUT", DIALOG
+    BEGIN
+        RIGHTMARGIN, 360
+        VERTGUIDE, 75
+        BOTTOMMARGIN, 222
+    END
+
+    "CYCLE", DIALOG
+    BEGIN
+        RIGHTMARGIN, 123
+    END
+
+    "EXPERIMENT", DIALOG
+    BEGIN
+    END
+
+    "COLOR", DIALOG
+    BEGIN
+        VERTGUIDE, 98
+        BOTTOMMARGIN, 229
+    END
+
+    "FOURIER", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 220
+    END
+
+    "CELL", DIALOG
+    BEGIN
+        RIGHTMARGIN, 129
+    END
+
+    "DIGITAL", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 137
+    END
+
+    "VIEW", DIALOG
+    BEGIN
+        RIGHTMARGIN, 192
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 147
+    END
+
+    "WORLD", DIALOG
+    BEGIN
+        RIGHTMARGIN, 144
+        BOTTOMMARGIN, 177
+    END
+
+    "ANALOG", DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 96
+        VERTGUIDE, 11
+        VERTGUIDE, 96
+        BOTTOMMARGIN, 223
+    END
+
+    "GENERATORS", DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 152
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 177
+        HORZGUIDE, 112
+    END
+
+    "OPENGL", DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 237
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 307
+    END
+
+    "CONTROLS", DIALOG
+    BEGIN
+        RIGHTMARGIN, 265
+    END
+
+    "SAVE", DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 124
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 126
+    END
+
+    "CONFIGURE", DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 248
+        VERTGUIDE, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+        HORZGUIDE, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "CAMCOS"
+            VALUE "FileDescription", "Capow"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Capow"
+            VALUE "LegalCopyright", "Copyright © San Jose State University 1998"
+            VALUE "OriginalFilename", "Capow.scr"
+            VALUE "ProductName", "CAMCOS Capow"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "SJSU"
+            VALUE "FileDescription", "Capow32"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Capow32"
+            VALUE "LegalCopyright", "Copyright © 1997"
+            VALUE "OriginalFilename", "Capow32.exe"
+            VALUE "ProductName", "SJSU Capow32"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200, 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+CAPOW_ACCELERATORS ACCELERATORS
+BEGIN
+    "A",            IDM_CHANGEALLMENU,      VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_CAPTURE,            VIRTKEY, CONTROL, NOINVERT
+    "F",            IDM_CHANGEFOCUSMENU,    VIRTKEY, CONTROL, NOINVERT
+    "G",            IDM_OPENGL,             VIRTKEY, CONTROL, NOINVERT
+    "L",            IDM_CLEAR,              VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_OPEN,               VIRTKEY, CONTROL, NOINVERT
+    "P",            IDM_PAUSE,              VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDM_TEST,               VIRTKEY, CONTROL, NOINVERT
+    "R",            IDM_RANDOMIZE,          VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_FILE_SAVE,          VIRTKEY, CONTROL, NOINVERT
+    "U",            IDM_USERDIALOG,         VIRTKEY, CONTROL, NOINVERT
+    "V",            IDM_VIEW,               VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          IDM_HELP,               VIRTKEY, NOINVERT
+    VK_F1,          CUR_PICK,               VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          IDM_LOAD_USER_RULE,     VIRTKEY, NOINVERT
+    VK_F2,          CUR_ZAP,                VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          CUR_TOUCH,              VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          IDM_EXIT,               VIRTKEY, ALT, NOINVERT
+    VK_F4,          CUR_GENERATOR,          VIRTKEY, SHIFT, NOINVERT
+    "W",            IDM_WORLD,              VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_MAIN_MENU           "Contains commands to open, save, and change a CA or experiment."
+    IDS_MAIN_MENU1          "Contains commands to clear and capture the screen to the clipboard."
+    IDS_MAIN_MENU2          "Contains commands to open various configuration dialogs."
+    IDS_MAIN_MENU3          "Contains commands for customizing this window."
+    IDS_MAIN_MENU4          "Changes the current cursor function."
+    IDS_MAIN_MENU5          "Contains commands for displaying help and program information."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_OPEN                "placeholder"
+    IDS_PAUSE               "placeholder"
+    IDS_SPEED               "SPEED"
+    IDS_TOOLS_MENU4         "Changes the current cursor function."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CLEAR               "Clears the screen and restarts CAs."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXIT                "Quits Capow32."
+    IDM_PAUSE               "Pauses all CAs."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CAPTURE             "Captures the client window to the clipboard."
+    IDM_SHOW_STATUS         "Shows or hides the status bar."
+    IDM_SHOW_TOOLBAR        "Shows or hides the toolbar."
+    IDM_GENERATORS          "Opens the generators dialog."
+    IDM_CHANGEALLMENU       "Apply Changes to All CAs."
+    IDM_CHANGEFOCUSMENU     "Apply Changes to Focus CA."
+    IDM_OLDTOOLBAR          "Show/Hide Dialog Toolbar."
+    IDM_NEWTOOLBAR          "Show/Hide Action Toolbar."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_ANALOG              "Opens the Analog configuration dialog."
+    IDM_ELECTRIC            "Opens the Electric configuration dialog."
+    IDM_DIGITAL             "Opens the Digital and Reversible rule dialog."
+    IDM_WORLD               "Opens the World configuration dialog."
+    IDM_USERDIALOG          "Opens the User rule configuration window."
+    IDM_OPENGL              "Opens the OpenGL configuration dialog."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CYCLE               "Opens the Breeding configuration dialog."
+    IDM_COLOR               "Opens the Color configuration dialog."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FOURIER             "Opens the Fourier configuration dialog."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXP                 "Opens the Information Grid for the current CA."
+END
+
+STRINGTABLE
+BEGIN
+    CUR_PICK                "Changes cursor to pick and zoom mode."
+    CUR_ZAP                 "Changes cursor to copy mutation mode."
+    CUR_TOUCH               "Changes cursor to touch mode."
+    CUR_GENERATOR           "Changes cursor to place generator mode."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_HELP                "Opens the help file."
+    IDM_ABOUT               "Displays program information."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_SAVE_ALL_WITH_CELLS "Saves the current experiment and all cell values."
+    IDM_SAVE_INDIVIDUAL_WITH_CELLS 
+                            "Saves an individual CA and all cell values."
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_SAVE           "Save a Capow File."
+    IDM_OPEN                "Open a CA, CAS, or User DLL file."
+    IDM_CONFIGURE           "Opens the autorandomize dialog."
+END
+
+STRINGTABLE
+BEGIN
+    ID_VERYSLOW             "Run Capow in very slow speed."
+    ID_SLOW                 "Run Capow in Slow mode."
+    ID_MEDIUM               "Runs Capow in medium speed."
+    ID_FAST                 "Run Capow in Fast mode."
+    ID_FASTEST              "Run Capow in fastest speed (Jerky in 1D )."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

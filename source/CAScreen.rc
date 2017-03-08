@@ -1,0 +1,168 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resrc1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "scrnsave.h"
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_SCRNSAVECONFIGURE DIALOG DISCARDABLE  300, 200, 243, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "CAPOW Screen Saver "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,174,39,25,WS_GROUP
+    PUSHBUTTON      "Cancel",ID_CANCEL,152,175,39,25
+    LTEXT           "Seconds",IDC_STATIC,74,152,29,8
+    GROUPBOX        "Autorandomize Time Interval",IDC_STATIC,9,139,102,24,
+                    BS_CENTER
+    GROUPBOX        "Possible CA Dimensionality",IDC_STATIC,11,21,93,43,
+                    BS_CENTER
+    CONTROL         "2D Rules Only",IDC_ALLOW_2D_RULES,"Button",
+                    BS_AUTORADIOBUTTON,17,40,61,10
+    CONTROL         "1D Rules Only",IDC_ALLOW_1D_RULES,"Button",
+                    BS_AUTORADIOBUTTON,17,29,61,10
+    CONTROL         "Both 1D and 2D",IDC_ALLOW_BOTH_RULES,"Button",
+                    BS_AUTORADIOBUTTON,17,51,67,10
+    GROUPBOX        "Possible Numbers Of CAs",IDC_STATIC,134,20,98,32,
+                    BS_CENTER
+    CONTROL         "Randomize Colors",IDC_ALLOW_RANDOM_COLOR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,151,88,10
+    CONTROL         "Digital Only",IDC_DIGITAL,"Button",BS_AUTORADIOBUTTON,
+                    17,77,51,10
+    GROUPBOX        "Possible 1D Rule Types",IDC_STATIC,11,69,93,43
+    CONTROL         "Analog Only",IDC_ANALOG,"Button",BS_AUTORADIOBUTTON,17,
+                    87,65,10
+    CONTROL         "Both Digital and Analog",IDC_DIGITALANALOG,"Button",
+                    BS_AUTORADIOBUTTON,17,98,84,10
+    CONTROL         "Add A Bump To Seeding",IDC_DING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,161,88,10
+    GROUPBOX        "Possible Views of 1D CAs",IDC_STATIC,134,53,98,54
+    CONTROL         "Scroll View Only",IDC_SCROLL,"Button",
+                    BS_AUTORADIOBUTTON,137,73,67,10
+    CONTROL         "Split View Only (With Graph)",IDC_SPLIT,"Button",
+                    BS_AUTORADIOBUTTON,137,62,92,10
+    CONTROL         "Both Split and Scroll Views",IDC_SPLITSCROLL,"Button",
+                    BS_AUTORADIOBUTTON,137,84,88,10
+    GROUPBOX        "Views of Single 2D CA",IDC_STATIC,134,107,98,35
+    EDITTEXT        IDC_TIMER,20,147,40,14,ES_AUTOHSCROLL
+    CONTROL         "Nine",IDC_NINE_CA,"Button",BS_AUTORADIOBUTTON,188,29,31,
+                    10
+    CONTROL         "Four",IDC_FOUR_CA,"Button",BS_AUTORADIOBUTTON,137,39,31,
+                    10
+    CONTROL         "One",IDC_ONE_CA,"Button",BS_AUTORADIOBUTTON,137,28,31,
+                    10
+    CONTROL         "Varying",IDC_VARYCOUNT,"Button",BS_AUTORADIOBUTTON,187,
+                    38,35,11
+    CONTROL         "All Possible Views",IDC_ALLVIEW,"Button",
+                    BS_AUTORADIOBUTTON,137,95,83,10
+    GROUPBOX        "CA Rule",IDC_STATIC,9,11,102,122
+    CONTROL         "3D Surface",IDC_ALLOW_3D_VIEW,"Button",
+                    BS_AUTORADIOBUTTON,137,117,49,10
+    CONTROL         "2D Colors",IDC_FLAT_3D_VIEW,"Button",BS_AUTORADIOBUTTON,
+                    137,126,46,10
+    CONTROL         "Both ",IDC_BOTH_3D_VIEW,"Button",BS_AUTORADIOBUTTON,206,
+                    115,31,16
+    GROUPBOX        "CA View",IDC_STATIC,123,11,114,134
+    CONTROL         "Use SCREENSAVER.CA",IDC_PROFILE_FILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,118,90,10
+    PUSHBUTTON      "Default",IDC_RESET,108,175,39,25
+    LTEXT           "For help, check Screensaver Topic in CAPOW.HLP.\nCapow98 is shareware from www.mathcs.sjsu.edu/capow.",
+                    IDC_STATIC,1,166,100,34
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""scrnsave.h""\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+CAPOW                   ICON    DISCARDABLE     "Capow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    DLG_SCRNSAVECONFIGURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 237
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
