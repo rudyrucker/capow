@@ -42,7 +42,7 @@ BEGIN
     LTEXT           "Spring 96: Darrel Cherry, John Briere, Bang Nguyen, Thai Truong,  \n                 Juiliekara Techasaratoole, Rajaneekara Techasaratoole.",IDC_STATIC,86,138,270,16
     LTEXT           "Fall 96:      Chi Pan Lao, Otto Leung, Darin Levy,  James Kroutch, Siu Ming Tong.",IDC_STATIC,84,154,269,9
     LTEXT           "CAPOW! Continuous Valued Cellular Automata",IDC_STATIC,75,3,174,8
-    LTEXT           "Release 9.  March 8, 2017. Copyright 2017, Rudy Rucker.",IDC_STATIC,75,11,198,8
+    LTEXT           "Release 8.0.  March 8, 2017. Copyright 2017, Rudy Rucker. GNU 3 Licensed.",IDC_STATIC,75,11,248,8
     LTEXT           "Based on research funded by the Electric Power Research Institute (EPRI),",IDC_STATIC,75,23,320,8
     LTEXT           "Palo Alto, California, with Martin Wildberger as project liason. The CAPOW",IDC_STATIC,75,31,320,8
     LTEXT           "software and documentation are partly by teams at the Center for Applied",IDC_STATIC,75,39,320,8
@@ -50,7 +50,7 @@ BEGIN
     LTEXT           "Mathematics Department at San Jose State University.",IDC_STATIC,75,55,320,8
     LTEXT           "CAPOW Designer: Rudy Rucker, rudy@rudyrucker.com",IDC_STATIC,75,85,272,8
     LTEXT           "",IDD_PROGICON,3,9,70,100,NOT WS_GROUP
-    LTEXT           "Capow home page: www.rudyrucker.com/capow \nSee also Rucker's book,\n ""The Lifebox, the Seashell and the Soul"" \n www.rudyrucker.com/lifebox",IDC_STATIC,75,182,197,32
+    LTEXT           " Capow home page: rudyrucker.com/capow \n Source code: github.com/rudyrucker/capow",IDC_STATIC,75,190,191,21
     LTEXT           "Spring 97:Michael Ling , Andrew Forster, Loc Ho, Lorrie Tanabe \nFall 97: Andrew Forster, Michael Ling, Ted Colbert,  Rong Liu.",IDC_STATIC,84,162,271,18
     LTEXT           "The CAPOW executables and support files are shareware and may be\nfreely copied and distrubuted for non-commerical purposes.",IDC_STATIC,75,64,220,18
 END
