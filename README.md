@@ -1,6 +1,6 @@
 # capow
 
-Capow is a Windows program Rudy Rucker began with his San Jose State students during 1994-1998. Rucker has worked a little more on the program over the years, with the latest release in 2017. Although the program illustrates scientific notions, the real purpose of it is for play. You create and watch lava-lamp-like realtime tweakable light-shows, based on 1D and 2D continuous valued celluar automata modelled on linear and nonlinear wave equations, on reaction-diffusion rules, and on user programmable rules.
+Capow is a Windows program Rudy Rucker began with his San Jose State students during 1994-1998. Rucker has worked a little more on the program over the years, with the latest release in 2017. Although the program illustrates scientific notions, the real purpose of it is for play. You create and watch gnarly edge-of-chaos lava-lamp-like realtime tweakable light-shows, based on 1D and 2D continuous valued celluar automata modelled on linear and nonlinear wave equations, on reaction-diffusion rules, and on user programmable rules.
 
 Download  <a href="https://github.com/rudyrucker/capow/releases/download/v8.0/Capow-8.0.zip">Capow Release 8.0</a> for Windows (32 and 64 bit)  
 
