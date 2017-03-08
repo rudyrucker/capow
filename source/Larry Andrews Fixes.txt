@@ -1,0 +1,213 @@
+These describe some fixes made by a CAPOW user named Larry Andrews around 2001.
+
+=============
+Hi Rudy,
+
+I guess it's time for a report on my initial look at Capow98. I
+don't consider what I've done so far to be thorough, but it's a
+first cut. C/C++ Users Journal emailed me yesterday, and they
+want another manuscript. I found a simple, not too imperfect
+string-matching algorithm in 1980 (Electronics magazine), and I
+have used it with the nearest neighbor algorithm to make a
+spelling correction algorithm to make menus able to tolerate
+misspellings. So I need to do some work on that. I also have a
+small contract job that needs some attention.
+
+Wherever I have changed code, I have put in "l.andrews" so you
+can find my changes that way. I have not added a change section
+at the beginning, since I don't know if all (or any) of these
+changes will make it into the final version.
+
+larry
+
+===================================================
+
+Much of what I've done in Capow is just set initializations. Most
+of the uses of uninitialized variables is probably harmless,
+since capow seems to do multiple levels of initialization, but
+they kept popping up in BoundsChecker so I fixed them. I was a
+little concerned about minx/maxx. I have tended to be rather
+conservative in what I did since I am (obviously) not a expert on
+capow, and it does seem to work for long periods of time. I don't
+see much reason to make dangerous changes to a working program
+which is not under active support or development.
+
+I saw some problem areas that only the expert is going to see or
+else are only transient problems. The color table boundary
+conditions are either not correct or else they are intentionally
+set to indicate the boundary. color_index[MAX_COLOR-1] is not
+continuous with the adjacent color members; you can actually see
+this in the color window. The thin line in a different color at
+the top of the color bar is the last color, not a screen
+artifact. color_index[0] is also not continuous, but it does not
+seem to show on the color bar. These values account for dark
+solid areas in the CA history when limiting conditions are
+indicated in the graph.
+
+There appear to be a number of conditions that generate extrema
+of the data that exceed the graph limits. The maximum values is
+apparently not computed with fabs. Also, when you change CA, the
+previous max_intensity is used for one cycle or more, even if it
+is not appropriate. That accounts for some of the narrow band of
+different behaviour when you change CA.
+
+When the color_index index is computed, the cast to (unsigned
+short) turns negative values into large positive values.
+POSITIVECLAMP currently fixes that. Any more elegant fix is
+likely to slow the CA, I found. Other solutions are possible, I'm
+sure. Out of range index values arise routinely from large negative CA
+data values or large positive CA data values. These are more common when
+you go from a CA that has max_intensity set to something like 500 to one
+that has max_intensity 1, but the data have not yet been reset.
+
+I have not made much attempt to dig deep enough to try to fix all
+this. It's a bunch of code in a program that probably works well
+enough. I have looked at capow for years and not been troubled by
+these things. Obviously, if capow were to undergo some major
+work, these things would bear some attention.
+
+====================================================
+
+
+A number of variables were found to be used (or at least
+accessed) without initialization. I have added initialization for
+those that occur in the initial startup. I have not fully exercised the
+whole program and all menus; more would be found then, I'm sure.
+
+oldpen
+oldpenWBM
+focus
+type_ca
+dimension
+maxx
+minx
+
+========================================
+
+In addition, there were variables that were uninitialized because
+their initialization was in the wrong place.
+In capowGL.cpp, the line
+    hRC = SetUpOpenGL(hwnd);
+was moved down so that necessary initializations (for instance,
+lightsflag) were done before the variables were used.
+
+========================================
+
+In a similar, fashion, in ca.cpp the line
+    band_count = START_BAND_COUNT;
+was moved up so that colortable would be initialized when it was
+first used.
+
+========================================
+
+source_row was continually being flagged as having uninitialized
+data. In ca.cpp, after the line:
+    rowbuffer[i] = (unsigned char  *) new char[_max_horz_count];
+I added initialization:
+  for ( int j=0; j<_max_horz_count; ++j ) rowbuffer[i][j] = '\0'; This
+fixed the handling of uninitialized data, but while working on this
+problem, it did seem that source_row and its contents are being
+initialized  and manipulated multiple times in many cases. Obviously,
+before anything gets displayed, a "real" initialization must be taking
+place, so the ones that I saw uninitialized are some preliminary
+shuffing of data.
+
+========================================
+
+A trivial problem (since windows seems to handle the null handle,
+but the definition of the function excludes it) was fixed by
+adding a test for zero in camore.cpp :
+    if ( hwndStatusBar != 0 ) Status_SetText(hwndStatusBar, 1, 0,
+CA_STYLE_NAME ); //Andrew
+
+========================================
+
+On the second and 11th calls in the following two lines,
+BoundsChecker complained about invalid second arguments for
+    SelectObject(hdc,oldpen);
+    SelectObject(hdcWBM,oldpenWBM);
+I fixed that problem by reversing the order of the calls.
+Apparently, they are on a stack inside of windows and the order
+of selecting objects affects operations. This problem was
+probably causing a resource leak.
+
+========================================
+
+A more serious problem was that the variable hRC came up as
+uninitialized in capowGL.cpp, line 194 (line  number may have
+changed a little). The problem turned out to be that a local hRC
+was hiding the global name. I commented out the local variable
+(at line 139), and now it seems to work correctly:
+    // HGLRC hRC; // l.andrews 11/3/01 this was hiding the member
+variable
+
+========================================
+
+There was a case of index exceeding dimensions in seed.cpp, line
+820. I changed the definition, but I do not know if the solution
+is correct.
+    Real fourier_frequency_Y_2D[FOURIER_SEED_TERMS]
+        [FOURIER_SEED_TERMS_X_2D];
+was changed to:
+    Real fourier_frequency_Y_2D[FOURIER_SEED_TERMS_X_2D]
+        [FOURIER_SEED_TERMS_Y_2D]; (TWO CHANGES)
+I am uncomfortable about finding what seems to be two errors.
+Another possible solution would be to make the code:
+    Real fourier_frequency_Y_2D[FOURIER_SEED_TERMS_Y_2D]
+        [FOURIER_SEED_TERMS_X_2D];
+and change the indexing in the code. I think this would not make
+any difference, but I am unsure of the original intent.
+
+Note that there are two versions of fourierseed, selected by an
+ifdef (that caused me a little confusion for a while).
+
+====================================================
+
+On exit:
+Capow.cpp, lines 777, 778, 779 initiated one-time resource leaks.
+These are calls to LoadMenu, but there is no corresponding
+release of the resource on exit. (Harmless)
+
+===========================
+changing to standard CA, seed routine seems to be called twice.
+
+=====================================
+changing to reversible, selecting ONE always gives a pattern that
+grows fastest to the LEFT (very little growth to the right). I
+would expect it to be symmetrical, but I do not know the intent.
+
+=========================================
+
+The pattern from ONE for wave equation does not give the same
+shape in each CA. I suppose that the differences have to do with
+CA scaling parameters, but I am not sure.
+
+===================================
+Switching from standard to reversible, called seed.cpp
+//Start 1D Setup
+        //reset all rows to top
+        source_row = rowbuffer[0];
+NINE times!
+
+Selecting ONE also did that NINE times (seems like reversible is
+setting as if there were 9 CA's. Probably a missing if test
+somewhere. (We discussed this in an email, and you thought this was the
+intended, safe behavior.)
+
+
+========================================
+
+
+NOTE THAT THERE ARE TWO VERSIONS OF CA::FourierSeed with an ifdef
+selecting which one is used.
+
+
+========================================
+
+
+On selecting view button, invalid second arg. in GetDlgItem in
+        EnableWindow(GetDlgItem(hDlg, i),
+
+Also, there is no way to take account of GetDlgItem returning a
+null. Windows handles these nulls well, but there is some minor
+problem here.
