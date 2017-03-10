@@ -13,8 +13,8 @@ Capow is known to work on all Windows builds through version 10.  Download and u
 
 [1] <a href="http://www.rudyrucker.com/capow">The Capow home page</a>, with information about the history of the program.
 
-[2] <a href="http://www.rudyrucker.com/blog/2017/03/10/still-seeking-the-gnarl/">"Still Seeking the Gnarl."</a>, discursive March 10, 2017 blog post about the program.
+[2] <a href="http://www.rudyrucker.com/blog/2017/03/10/still-seeking-the-gnarl/">"Still Seeking the Gnarl."</a>, discursive, illustrated blog post about the program, March 10, 2017.
 
 [3] <a href="http://www.rudyrucker.com/pdf/rucker_continuous_CAs_in_2D.pdf"> “Continuous-Valued CAs in Two Dimensions,” </a> paper presented at the Santa Fe Institute in 1999. 
 
-[4] <a href="http://www.rudyrucker.com/lifebox/html/#calibre_link-186"> “Flickercladding”</a>, a section on CAs in Rucker's 2005 book <em>The Lifebox, the Seashell, and the Soul</em> (readable online).
+[4] <a href="http://www.rudyrucker.com/lifebox/html/#calibre_link-186"> “Flickercladding”</a>, a section on CAs in Rucker's book <em>The Lifebox, the Seashell, and the Soul</em> (published 2005, posted online 2016).
