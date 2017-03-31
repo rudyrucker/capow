@@ -160,7 +160,6 @@
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="configure.cpp" />
-    <ClCompile Include="Controlb.cpp" />
     <ClCompile Include="Cycle.cpp" />
     <ClCompile Include="Digital.cpp" />
     <ClCompile Include="Dllmem.cpp" />
