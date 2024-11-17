@@ -4,7 +4,8 @@ Capow is a Windows program Rudy Rucker began with his San Jose State students du
 
 Download  <a href="https://github.com/rudyrucker/capow/releases/download/v8.0/Capow-8.0.zip">Capow Release 8.0</a> for Windows (32 and 64 bit)  
 
-Capow is known to work on all Windows builds through version 10.  Download and unzip the program, run capow2017.exe, and load some of the paramater files supplied.  You might start by viewing the file called "2D Grid - Gnarly Computation (pattern).CAS".  Here's an image of those parameters in action. The Capow <a href="http://www.rudyrucker.com/capow/capowhelp.htm">help file</a> contains further suggestions.
+Capow is known to work on all Windows builds through version 10, and WINE on Linux.  Download and unzip the program, run capow2017.exe, and load some of the paramater files supplied.  You might start by viewing the file called "2D Grid - Gnarly Computation (pattern).CAS".  Here's an image of those parameters in action. The Capow <a href="http://www.rudyrucker.com/capow/capowhelp.htm">help file</a> contains further suggestions.
+
 
 <img alt="" src="http://www.rudyrucker.com/blog/images7/capow2017_1200.jpg" />
 
